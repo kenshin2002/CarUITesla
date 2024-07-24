@@ -1,4 +1,4 @@
-import QtQuick 2.15
+import QtQuick 2.12
 import QtLocation 5.11
 import QtPositioning 5.11
 Rectangle{
@@ -34,6 +34,26 @@ Rectangle{
         MouseArea{
             anchors.fill: parent
             onClicked: SystemHander.setCarLocked(!SystemHander.carLocked)
+        }
+    }
+    Rectangle{
+        width: lockCarId.width
+        height: lockCarId.height
+        anchors{
+            top: lockCarId.top
+            left:lockCarId.right
+            leftMargin: 5
+            bottom:lockCarId.bottom
+            bottomMargin: 5
+        }
+        Text {
+            id: timeTextId
+            //anchors.fill: parent
+            //contentWidth: parent.width
+            text: SystemHander.timeSystem
+            font.pointSize: 10
+            font.bold: true
+            //width: parent.width/40
         }
     }
 }

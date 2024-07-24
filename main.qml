@@ -1,5 +1,5 @@
-import QtQuick 2.15
-import QtQuick.Window 2.15
+import QtQuick 2.12
+import QtQuick.Window 2.12
 import "ui/BottomBar"
 import "ui/RightScreen"
 import "ui/LeftScreen"

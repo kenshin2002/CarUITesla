@@ -3,11 +3,11 @@
 System::System(QObject *parent)
     : QObject{parent},m_carLocked(true),m_outDoorTemp(65),m_userName("Hoang")
 {
-  //  m_timeSystemTimer=new QTimer(this);
-    //m_timeSystemTimer->setInterval(500);
-   // m_timeSystemTimer->setSingleShot(true);
-   // connect(m_timeSystemTimer,&QTimer::timeout,this,&System::timeSystemTimerTimeOut);
-   // timeSystemTimerTimeOut();
+    m_timeSystemTimer=new QTimer(this);
+    m_timeSystemTimer->setInterval(500);
+    m_timeSystemTimer->setSingleShot(true);
+    connect(m_timeSystemTimer,&QTimer::timeout,this,&System::timeSystemTimerTimeOut);
+    timeSystemTimerTimeOut();
 }
 
 bool System::carLocked() const
@@ -54,3 +54,26 @@ void System::setUserName(const QString &newUserName)
 
 
 
+
+QString System::timeSystem() const
+{
+    return m_timeSystem;
+}
+
+void System::setTimeSystem(const QString &newTimeSystem)
+{
+    if (m_timeSystem == newTimeSystem)
+        return;
+    m_timeSystem = newTimeSystem;
+    emit timeSystemChanged();
+}
+
+void System::timeSystemTimerTimeOut()
+{
+    QDateTime dateTime;
+    QString currentTime=dateTime.currentDateTime().toString("h :m ap");
+    qDebug()<<currentTime;
+    setTimeSystem(currentTime);
+    qDebug()<<"start timer";
+    m_timeSystemTimer->start();
+}
