@@ -8,5 +8,8 @@
         <file>ui/asserts/carIcon.png</file>
         <file>ui/asserts/carLock.png</file>
         <file>ui/asserts/carUnlock.png</file>
+        <file>ui/asserts/clockIcon.png</file>
+        <file>ui/asserts/temparatureIcon.png</file>
+        <file>ui/asserts/temparature.png</file>
     </qresource>
 </RCC>

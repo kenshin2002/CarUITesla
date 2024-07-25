@@ -36,25 +36,77 @@ Rectangle{
             onClicked: SystemHander.setCarLocked(!SystemHander.carLocked)
         }
     }
-    Rectangle{
-        width: lockCarId.width
-        height: lockCarId.height
+    Image {
+        id: clockId
+        source: "qrc:/ui/asserts/clockIcon.png"
         anchors{
-            top: lockCarId.top
-            left:lockCarId.right
+          top:parent.top
+          left:lockCarId.left
+          leftMargin: 100
+          topMargin: 5
+        }
+        fillMode:Image.PreserveAspectFit
+        width: parent.width/40
+    }
+    Text {
+        id: timeTextId
+        text: SystemHander.timeSystem
+        anchors{
+            top: clockId.top
+            left:clockId.right
             leftMargin: 5
-            bottom:lockCarId.bottom
+            bottom:clockId.bottom
             bottomMargin: 5
+            topMargin: 10
         }
-        Text {
-            id: timeTextId
-            //anchors.fill: parent
-            //contentWidth: parent.width
-            text: SystemHander.timeSystem
-            font.pointSize: 10
-            font.bold: true
-            //width: parent.width/40
+     font.pointSize: 10
+     font.pixelSize: 14
+     font.bold: true
+     //width: parent.width/40
+    }
+    Image {
+        id: temparatureId
+        source: "qrc:/ui/asserts/temparature.png"
+        anchors{
+          top:parent.top
+          left:timeTextId.left
+          leftMargin: 100
+          topMargin: 5
         }
+        fillMode:Image.PreserveAspectFit
+        width: parent.width/40
+    }
+    Text {
+        id: temparatureTextId
+        text: SystemHander.outDoorTemp +"°F"
+        anchors{
+            top: temparatureId.top
+            left:temparatureId.right
+            leftMargin: 5
+            bottom:temparatureId.bottom
+            bottomMargin: 5
+            topMargin: 10
+        }
+     font.pointSize: 10
+     font.pixelSize: 14
+     font.bold: true
+     //width: parent.width/40
+    }
+    Text {
+        id: userNameTextId
+        text: SystemHander.userName
+        anchors{
+            top: temparatureId.top
+            left:temparatureId.right
+            leftMargin: 100
+            bottom:temparatureId.bottom
+            bottomMargin: 5
+            topMargin: 10
+        }
+     font.pointSize: 10
+     font.pixelSize: 14
+     font.bold: true
+     //width: parent.width/40
     }
 }
 

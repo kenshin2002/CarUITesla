@@ -107,9 +107,12 @@ release/qrc_qml.cpp: ../../qml.qrc \
 		../../main.qml \
 		../../ui/LeftScreen/LeftScreen.qml \
 		../../ui/asserts/carIcon.png \
+		../../ui/asserts/clockIcon.png \
 		../../ui/asserts/carUnlock.png \
 		../../ui/asserts/carRender.jpg \
 		../../ui/asserts/carLock.png \
+		../../ui/asserts/temparature.png \
+		../../ui/asserts/temparatureIcon.png \
 		../../ui/BottomBar/BottomBar.qml \
 		../../ui/RightScreen/RightScreen.qml
 	C:\Qt\5.15.17\mingw81_64\bin\rcc.exe -name qml ..\..\qml.qrc -o release\qrc_qml.cpp
@@ -178,6 +181,24 @@ release/moc_system.cpp: ../../Controller/system.h \
 		C:/Qt/5.15.17/mingw81_64/include/QtCore/qcontainerfwd.h \
 		C:/Qt/5.15.17/mingw81_64/include/QtCore/qobject_impl.h \
 		C:/Qt/5.15.17/mingw81_64/include/QtCore/QString \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/QTimer \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/qtimer.h \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/qbasictimer.h \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/QDatetime \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/qdatetime.h \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/qshareddata.h \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/qhash.h \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/QDebug \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/qdebug.h \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/qmap.h \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/qtextstream.h \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/qiodevice.h \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/qlocale.h \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/qvariant.h \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/qset.h \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/qcontiguouscache.h \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/qsharedpointer.h \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/qsharedpointer_impl.h \
 		release/moc_predefs.h \
 		C:/Qt/5.15.17/mingw81_64/bin/moc.exe
 	C:\Qt\5.15.17\mingw81_64\bin\moc.exe $(DEFINES) --include D:/PersonalProject/UICarTesla/build/Desktop_Qt_5_15_17_MinGW_64_bit-Debug/release/moc_predefs.h -IC:/Qt/5.15.17/mingw81_64/mkspecs/win32-g++ -ID:/PersonalProject/UICarTesla -IC:/Qt/5.15.17/mingw81_64/include -IC:/Qt/5.15.17/mingw81_64/include/QtQuick -IC:/Qt/5.15.17/mingw81_64/include/QtGui -IC:/Qt/5.15.17/mingw81_64/include/QtANGLE -IC:/Qt/5.15.17/mingw81_64/include/QtQmlModels -IC:/Qt/5.15.17/mingw81_64/include/QtQml -IC:/Qt/5.15.17/mingw81_64/include/QtNetwork -IC:/Qt/5.15.17/mingw81_64/include/QtCore -I. -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++ -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include -IC:/Qt/Tools/mingw810_64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed -IC:/Qt/Tools/mingw810_64/x86_64-w64-mingw32/include ..\..\Controller\system.h -o release\moc_system.cpp
@@ -252,7 +273,25 @@ release/system.o: ../../Controller/system.cpp ../../Controller/system.h \
 		C:/Qt/5.15.17/mingw81_64/include/QtCore/qvarlengtharray.h \
 		C:/Qt/5.15.17/mingw81_64/include/QtCore/qcontainerfwd.h \
 		C:/Qt/5.15.17/mingw81_64/include/QtCore/qobject_impl.h \
-		C:/Qt/5.15.17/mingw81_64/include/QtCore/QString
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/QString \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/QTimer \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/qtimer.h \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/qbasictimer.h \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/QDatetime \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/qdatetime.h \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/qshareddata.h \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/qhash.h \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/QDebug \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/qdebug.h \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/qmap.h \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/qtextstream.h \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/qiodevice.h \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/qlocale.h \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/qvariant.h \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/qset.h \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/qcontiguouscache.h \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/qsharedpointer.h \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/qsharedpointer_impl.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\system.o ..\..\Controller\system.cpp
 
 release/main.o: ../../main.cpp C:/Qt/5.15.17/mingw81_64/include/QtGui/QGuiApplication \
@@ -349,7 +388,18 @@ release/main.o: ../../main.cpp C:/Qt/5.15.17/mingw81_64/include/QtGui/QGuiApplic
 		C:/Qt/5.15.17/mingw81_64/include/QtQml/qqmlpropertyvaluesource.h \
 		C:/Qt/5.15.17/mingw81_64/include/QtCore/qpointer.h \
 		C:/Qt/5.15.17/mingw81_64/include/QtCore/qmetaobject.h \
-		C:/Qt/5.15.17/mingw81_64/include/QtQml/qqmlerror.h
+		C:/Qt/5.15.17/mingw81_64/include/QtQml/qqmlerror.h \
+		C:/Qt/5.15.17/mingw81_64/include/QtQml/QQmlContext \
+		C:/Qt/5.15.17/mingw81_64/include/QtQml/qqmlcontext.h \
+		../../Controller/system.h \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/QObject \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/QString \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/QTimer \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/qtimer.h \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/qbasictimer.h \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/QDatetime \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/qdatetime.h \
+		C:/Qt/5.15.17/mingw81_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main.o ..\..\main.cpp
 
 release/qrc_qml.o: release/qrc_qml.cpp 
